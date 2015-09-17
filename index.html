@@ -8,7 +8,6 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css" media="screen">
     <script type="text/javascript" href="javascripts/bootstrap.js"></script>
   </head>
   <body>
@@ -18,8 +17,13 @@
       <!--<a href="#the-team" class="btn">The Team</a>
       <a href="#project-artifacts" class="btn">Project Artifacts</a>
       <a href="#meetings" class="btn">Meetings</a>-->
-
-    <ul class="nav nav-tabs" role="tablist">
+    <script type="text/javascript">
+      $('#tabList a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      })
+    </script>
+    <ul class="nav nav-tabs" role="tablist" id="tabList">
       <li role="presentation" class="active"><a href="#meetings" aria-controls="meetings" role="tab" data-toggle="tab" class="btn">Meetings</a></li>
       <li role="presentation"><a href="#about" aria-controls="project-artifacts" role="tab" data-toggle="tab" class="btn">About</a></li>
       <li role="presentation"><a href="#project-artifacts" aria-controls="project-artifacts" role="tab" data-toggle="tab" class="btn">Project Artifacts</a></li>
